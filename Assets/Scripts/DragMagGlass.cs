@@ -12,6 +12,9 @@ public class DragMagGlass : MonoBehaviour
     public GameObject condom1;
     public GameObject condom2;
     public GameObject condom3;
+    public GameObject VaginaRing;
+    public GameObject Diaphragm;
+    public GameObject CervicalCap;
 
     void OnMouseDown()
     {
@@ -38,19 +41,29 @@ public class DragMagGlass : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other)
     {
         Debug.Log("colliding");
-        GameObject collidedObject = other.gameObject;
+  
+        string tag = other.gameObject.name;
 
-        if (collidedObject == condom1)
+        switch (tag)
         {
-            StartCoroutine(LoadSceneAfterDelay("Condom1Scene"));
-        }
-        else if (collidedObject == condom2)
-        {
-            StartCoroutine(LoadSceneAfterDelay("Condom2Scene"));
-        }
-        else if (collidedObject == condom3)
-        {
-            StartCoroutine(LoadSceneAfterDelay("Condom3Scene"));
+            case "VaginaRing":
+                StartCoroutine(LoadSceneAfterDelay("VaginaRingScene"));
+                break;
+            case "condom1":
+                StartCoroutine(LoadSceneAfterDelay("Condom1Scene"));
+                break;
+            case "condom2":
+                StartCoroutine(LoadSceneAfterDelay("Condom2Scene"));
+                break;
+            case "condom3":
+                StartCoroutine(LoadSceneAfterDelay("Condom3Scene"));
+                break;
+           case "CevicalCap":
+                StartCoroutine(LoadSceneAfterDelay("CevicalCapScene"));
+                break;
+            case "Diaphragm":
+                StartCoroutine(LoadSceneAfterDelay("DiaphragmScene"));
+                break;
         }
     }
 
@@ -60,4 +73,4 @@ public class DragMagGlass : MonoBehaviour
         SceneManager.LoadScene(sceneName);
     }
 
-}
+} 
