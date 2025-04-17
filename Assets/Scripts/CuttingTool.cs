@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class CuttingTool : MonoBehaviour
 {
@@ -122,7 +123,7 @@ public class CuttingTool : MonoBehaviour
                 {
                     hasCompletedLevel = true;
                     Debug.Log("Good job! Advancing to the next phase.");
-                    // Here you would add code to advance to the next level
+                    StartCoroutine(LoadSceneAfterDelay("PutCondomScene"));
                 }
             }
             else
@@ -147,4 +148,11 @@ public class CuttingTool : MonoBehaviour
             hasHitPackage = true;
         }
     }
+
+    private IEnumerator LoadSceneAfterDelay(string sceneName)
+    {
+        yield return new WaitForSeconds(1f);
+        SceneManager.LoadScene(sceneName);
+    }
+    
 }
