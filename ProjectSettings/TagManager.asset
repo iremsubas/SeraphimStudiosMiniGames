@@ -6,6 +6,7 @@ TagManager:
   tags:
   - CondomTag
   - PackageTag
+  - VaginaRingTag
   layers:
   - Default
   - TransparentFX
