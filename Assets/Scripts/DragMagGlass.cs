@@ -49,13 +49,13 @@ public class DragMagGlass : MonoBehaviour
             case "VaginaRing":
                 StartCoroutine(LoadSceneAfterDelay("VaginaRingScene"));
                 break;
-            case "condom1":
+            case "Condom1":
                 StartCoroutine(LoadSceneAfterDelay("Condom1Scene"));
                 break;
-            case "condom2":
+            case "Condom2":
                 StartCoroutine(LoadSceneAfterDelay("Condom2Scene"));
                 break;
-            case "condom3":
+            case "Condom3":
                 StartCoroutine(LoadSceneAfterDelay("Condom3Scene"));
                 break;
            case "CevicalCap":

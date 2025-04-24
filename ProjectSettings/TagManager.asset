@@ -4,9 +4,12 @@
 TagManager:
   serializedVersion: 3
   tags:
-  - CondomTag
   - PackageTag
   - VaginaRingTag
+  - CondomTag
+  - Package1
+  - Package2
+  - Package3
   layers:
   - Default
   - TransparentFX
