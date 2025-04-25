@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/SafeSexScene.unity
     guid: 42d4b6c1c02314a048d3de196a797190
   - enabled: 1
+    path: Assets/Scenes/IremsuScene.unity
+    guid: 19c02ee65893e4d4e8e28007738eebe5
+  - enabled: 1
     path: Assets/Scenes/Condom1Scene.unity
     guid: c466de2f8339842b28a9de5c10af3717
   - enabled: 1
@@ -21,8 +24,11 @@ EditorBuildSettings:
     path: Assets/Scenes/Condom3Scene.unity
     guid: cea5e398891e84362b357932b51771b8
   - enabled: 1
-    path: Assets/Scenes/IremsuScene.unity
-    guid: 19c02ee65893e4d4e8e28007738eebe5
+    path: Assets/Scenes/PutCondomScene.unity
+    guid: 6629a64ab11914cabb29b3e37c4e9ef4
+  - enabled: 1
+    path: Assets/Scenes/CongratulationsScene.unity
+    guid: 8c1341531ca804b2ba306b5d32a914a8
   - enabled: 1
     path: Assets/Scenes/JoyceScene.unity
     guid: f7ea2fd48bff14265874dff70e7c00e4
@@ -36,14 +42,8 @@ EditorBuildSettings:
     path: Assets/Scenes/DiaphragmScene.unity
     guid: e1173be3fa5b34464b85b981a60d20d8
   - enabled: 1
-    path: Assets/Scenes/PutCondomScene.unity
-    guid: 6629a64ab11914cabb29b3e37c4e9ef4
-  - enabled: 1
     path: Assets/Scenes/GameOverScene.unity
     guid: 3ecc1ac4e22ee472fb8007104885acae
-  - enabled: 1
-    path: Assets/Scenes/CongratulationsScene.unity
-    guid: 8c1341531ca804b2ba306b5d32a914a8
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
