@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/SampleScene.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
   - enabled: 1
+    path: Assets/Scenes/SafeSexScene.unity
+    guid: 42d4b6c1c02314a048d3de196a797190
+  - enabled: 1
     path: Assets/Scenes/Condom1Scene.unity
     guid: c466de2f8339842b28a9de5c10af3717
   - enabled: 1
