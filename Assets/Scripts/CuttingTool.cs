@@ -18,6 +18,13 @@ public class CuttingTool : MonoBehaviour
     public LineRenderer lineRenderer;
     private EdgeCollider2D edgeCollider;
 
+    public static bool isPackage1Ripped = false;
+
+    public static bool isPackage2Ripped = false;
+
+    public static bool isPackage3Ripped = false;
+
+
     void Start()
     {
         // Get or add the edge collider component
@@ -141,11 +148,25 @@ public class CuttingTool : MonoBehaviour
         {
             hasTearedCondom = true;
             Debug.Log("Game Over. You tore the condom. Try again!");
+            StartCoroutine(LoadSceneAfterDelay("GameOverScene"));
         }
-        else if (other.CompareTag("PackageTag") && hasDrawn)
+        else if (other.CompareTag("Package1") && hasDrawn)
         {
             // Mark that we've hit the package, but wait for mouse release to complete level
             hasHitPackage = true;
+            isPackage1Ripped = true;
+        }
+        else if (other.CompareTag("Package2") && hasDrawn)
+        {
+            // Mark that we've hit the package, but wait for mouse release to complete level
+            hasHitPackage = true;
+            isPackage2Ripped = true;
+        }
+        else if (other.CompareTag("Package3") && hasDrawn)
+        {
+            // Mark that we've hit the package, but wait for mouse release to complete level
+            hasHitPackage = true;
+            isPackage3Ripped = true;
         }
     }
 
