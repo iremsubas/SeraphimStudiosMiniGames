@@ -73,8 +73,13 @@ MonoBehaviour:
     m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 0
+<<<<<<< HEAD
     m_MaxSize: 230
     m_Alignment: 1
+=======
+    m_MaxSize: 40
+    m_Alignment: 0
+>>>>>>> 2c3aa1df528d957d6f6aeb761328cdfcc3595949
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0

@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 38b52ae868b4f4cb4bb54e9ff1c61275
+guid: 96764c92118a44e69b9651f685eb84cf
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -659175191719329562
-    second: bedroom1_0
+      213: 7679524778651859477
+    second: quiet1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -96,8 +96,6 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-<<<<<<< HEAD
-=======
   - serializedVersion: 4
     buildTarget: Android
     maxTextureSize: 2048
@@ -124,12 +122,11 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
->>>>>>> 2c3aa1df528d957d6f6aeb761328cdfcc3595949
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: bedroom1_0
+      name: quiet1_0
       rect:
         serializedVersion: 2
         x: 0
@@ -144,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6e0c1d4d7a32ad6f0800000000000000
-      internalID: -659175191719329562
+      spriteID: 51aba5b2917239a60800000000000000
+      internalID: 7679524778651859477
       vertices: []
       indices: 
       edges: []
@@ -163,7 +160,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      quiet1_0: 7679524778651859477
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
