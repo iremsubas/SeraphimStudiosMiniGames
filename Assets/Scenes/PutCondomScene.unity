@@ -457,6 +457,9 @@ MonoBehaviour:
   condom1: {fileID: 922114865}
   condom2: {fileID: 1689852288}
   condom3: {fileID: 1094424847}
+  VaginaRing: {fileID: 0}
+  Diaphragm: {fileID: 0}
+  CervicalCap: {fileID: 0}
 --- !u!61 &903967672
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1012,6 +1015,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   growSpeed: 0.3
   pinchHand: {fileID: 1892397897}
+  targetScaleY: 2
+  inkStoryManager: {fileID: 0}
 --- !u!70 &1079817567
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

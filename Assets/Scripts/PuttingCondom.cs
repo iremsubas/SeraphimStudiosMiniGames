@@ -1,10 +1,15 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PuttingCondom : MonoBehaviour
 {
     public float growSpeed = 0.01f; // Speed multiplier for growth
 
     public GameObject pinchHand;
+    public float targetScaleY = 2.0f; // The Y scale that counts as "fully put on"
+    private bool condomOn = false; 
+    public string storySceneName = "SafeSexScene";
+    public static string nextKnot = ""; 
 
     void Update(){
         if (Input.GetKeyDown(KeyCode.B))
@@ -14,6 +19,12 @@ public class PuttingCondom : MonoBehaviour
         if (Input.GetKeyUp(KeyCode.B))
         {
             pinchHand.SetActive(false);
+        }
+        if (!condomOn && transform.localScale.y >= targetScaleY)
+        {
+            condomOn = true;
+            Debug.Log("Condom put on correctly!");
+            GoBackToStory(); 
         }
 
     }
@@ -40,5 +51,14 @@ public class PuttingCondom : MonoBehaviour
                 transform.position = newPos;
             }
         }
+    }
+
+    void GoBackToStory()
+    {
+        nextKnot = "waiting_after_mini_game";
+
+        SceneManager.LoadScene(storySceneName);
+
+        Debug.Log("Returning to the story...");
     }
 }

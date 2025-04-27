@@ -20,12 +20,12 @@ What do you want to do?
 Do you want to find the right size?
 
 + Yes, let’s play the sizing game!
-    -> condom_sizing_game
+    -> condom_game
     
 + Just use a standard one.
     -> safe_outcome("external condom")
 
-=== condom_sizing_game ===
+=== condom_game ===
 # MINIGAME_CONDOM_SIZING
 [Starting condom sizing mini-game...]
 -> waiting_after_mini_game

@@ -18,7 +18,16 @@ public class InkStoryManager : MonoBehaviour {
 	// Creates a new Story object with the compiled story which we can then play!
 	void StartStory () {
 		story = new Story (inkJSONAsset.text);
-        if(OnCreateStory != null) OnCreateStory(story);
+		if (PuttingCondom.nextKnot != "") 
+		{
+			Debug.Log("Choosing path: " + PuttingCondom.nextKnot);
+			story.ChoosePathString(PuttingCondom.nextKnot);
+			PuttingCondom.nextKnot = ""; // Clear it after using
+		}
+
+		if (OnCreateStory != null) 
+			OnCreateStory(story);
+		
 		RefreshView();
 	}
 	
