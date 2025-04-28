@@ -48,11 +48,16 @@ public class InkStoryManager : MonoBehaviour {
                 StartCondomSizingMiniGame();
                 return; 
             }
-			// This removes any white space from the text.
+			if (story.currentTags.Contains("SWITCH_BACKGROUND_CLINIC"))
+			{
+				FindObjectOfType<BackgroundManagerScript>().SwitchToClinic();
+			}
+				// This removes any white space from the text.
 			text = text.Trim();
 			// Display the text on screen!
 			CreateContentView(text);
 		}
+		
 
 		// Display all the choices, if there are any!
 		if(story.currentChoices.Count > 0) {

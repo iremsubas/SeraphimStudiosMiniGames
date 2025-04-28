@@ -42,21 +42,116 @@ They respond:
 "That's totally fine! We can explore other methods — as long as we stay safe."
 
 + "What are the other options?"
-    -> alternative_methods
+    -> go_to_clinic
 + "Eh, never mind, let’s just skip it."
     -> no_protection_consequence
 
-=== alternative_methods ===
-There are several other ways to protect yourself:
+=== go_to_clinic ===
+# SWITCH_BACKGROUND_CLINIC
+You suggest looking into other options.  
+Your partner agrees, and you both visit a local clinic for advice.
 
-• Internal condoms  
-• Dental dams  
-• Mutual STI testing and barrier methods  
-• Abstaining from high-risk activities
+At the clinic, a nurse welcomes you.
 
-You and your partner decide to talk about what works best for both of you.
+Nurse: "Welcome! There are a few different types of birth control methods to consider.  
+Let me briefly explain the main categories."
+
+- "Hormonal Methods"
+    -> hormonal_methods_intro
+- "Barrier Methods"
+    -> barrier_methods_intro
+- "Long-Acting Reversible Contraceptives (LARCs)"
+    -> larc_intro
+- "Emergency Contraceptives"
+    -> emergency_intro
+
+=== hormonal_methods_intro ===
+Nurse: "Hormonal methods release hormones into your body to prevent pregnancy.  
+This includes options like the birth control pill, the patch, the shot, and the vaginal ring."
+
+-> clinic_interaction
+
+=== barrier_methods_intro ===
+Nurse: "Barrier methods physically block sperm from reaching the egg.  
+The most common method is the external condom, but there are also internal condoms, the diaphragm, and the cervical cap."
+
+-> clinic_interaction
+
+=== larc_intro ===
+Nurse: "LARCs (Long-Acting Reversible Contraceptives) are highly effective and last for years.  
+This includes the IUD (Intrauterine Device) and the implant, both of which require a visit to the doctor for insertion."
+
+-> clinic_interaction
+
+=== emergency_intro ===
+Nurse: "Emergency contraception is used after unprotected sex to prevent pregnancy.  
+There are pills you can take within 72 hours of unprotected sex, or a copper IUD can be used within 5 days."
+
+-> clinic_interaction
+
+=== clinic_interaction ===
+Nurse: "Now that you've learned about the different categories, let's take a closer look at the methods available."
+
+What would you like to learn more about?
+
++ "The Pill"
+    -> learn_pill
++ "External condom"
+    -> learn_external_condom
++ "IUD"
+    -> learn_iud
++ "Vaginal ring"
+    -> learn_vaginal_ring
++ "Diaphragm"
+    -> learn_diaphragm
++ "Emergency contraception"
+    -> learn_emergency_contraception
++ "I’m ready to decide."
+    -> ready_to_choose
+
+=== learn_pill ===
+Nurse: "The pill is a small tablet you take daily. It releases hormones that prevent ovulation.  
+It’s one of the most common hormonal methods and is 99% effective when taken properly."
+
+-> clinic_interaction
+
+=== learn_external_condom ===
+Nurse: "External condoms are worn on the penis during sex to prevent sperm from entering the vagina.  
+They are widely available, affordable, and also provide protection against STIs."
+
+-> clinic_interaction
+
+=== learn_iud ===
+Nurse: "The IUD is a small T-shaped device that is inserted into the uterus.  
+It’s a long-acting method that can last between 3 and 10 years, depending on the type. It’s very effective and doesn’t require daily action."
+
+-> clinic_interaction
+
+=== learn_vaginal_ring ===
+Nurse: "The vaginal ring is a flexible, small ring that you place inside your vagina.  
+It releases hormones to prevent pregnancy, and you replace it every month. It’s easy to use and doesn’t require daily attention."
+
+-> clinic_interaction
+
+=== learn_diaphragm ===
+Nurse: "The diaphragm is a small, flexible cup that you insert into your vagina.  
+It covers the cervix and must be used with spermicide. It can be used on demand and is very effective when used correctly."
+
+-> clinic_interaction
+
+=== learn_emergency_contraception ===
+Nurse: "Emergency contraception (like the morning-after pill) can be used after unprotected sex.  
+It works by delaying or preventing ovulation. It’s not meant for regular use but can prevent pregnancy if used within 72 hours."
+
+-> clinic_interaction
+
+=== ready_to_choose ===
+You and your partner discuss your options based on what you've learned.
+
+Nurse: "Great! Using any protection is better than none. Stay safe and check in with each other."
 
 -> safe_outcome("alternative method")
+
 
 === no_protection_consequence ===
 You and your partner proceed without any protection.
