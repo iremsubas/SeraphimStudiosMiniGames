@@ -131,6 +131,21 @@ It’s a long-acting method that can last between 3 and 10 years, depending on t
 Nurse: "The vaginal ring is a flexible, small ring that you place inside your vagina.  
 It releases hormones to prevent pregnancy, and you replace it every month. It’s easy to use and doesn’t require daily attention."
 
+Would you like to practice using the vaginal ring correctly?
+
++ "Yes, let’s try it out!"
+    -> vaginal_ring_game
++ "No, I’ll just learn about it for now."
+    -> clinic_interaction
+
+=== vaginal_ring_game ===
+# MINIGAME_VAGINAL_RING
+[Starting vaginal ring placement mini-game...]
+-> waiting_after_ring_game
+
+=== waiting_after_ring_game ===
+[You return after completing the vaginal ring mini-game, feeling more confident!]
+
 -> clinic_interaction
 
 === learn_diaphragm ===

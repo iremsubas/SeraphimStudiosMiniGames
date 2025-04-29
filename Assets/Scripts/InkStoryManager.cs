@@ -81,12 +81,18 @@ public class InkStoryManager : MonoBehaviour
         if (story.currentTags.Contains("MINIGAME_CONDOM_SIZING"))
         {
             StartCondomSizingMiniGame();
+			return;
         }
 
         if (story.currentTags.Contains("SWITCH_BACKGROUND_CLINIC"))
         {
             FindObjectOfType<BackgroundManagerScript>().SwitchToClinic();
         }
+		if (story.currentTags.Contains("MINIGAME_VAGINAL_RING"))
+		{
+			StartVaginalRingMiniGame();
+			return;
+		}
     }
 
     void OnClickChoiceButton(Choice choice)
@@ -135,6 +141,13 @@ public class InkStoryManager : MonoBehaviour
     void StartCondomSizingMiniGame()
     {
         Debug.Log("Launching Condom Sizing Mini-Game...");
-        SceneManager.LoadScene("IremsuScene");  // Example scene name
+        SceneManager.LoadScene("IremsuScene");  
     }
+
+	void StartVaginalRingMiniGame()
+	{
+		Debug.Log("Launching Vaginal Ring Mini-Game...");
+		SceneManager.LoadScene("VaginaRingScene");  
+	}
+
 }

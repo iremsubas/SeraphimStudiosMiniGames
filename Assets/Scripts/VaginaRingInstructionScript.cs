@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class VaginaRingInstructionScript : MonoBehaviour
 {
@@ -44,7 +45,8 @@ public class VaginaRingInstructionScript : MonoBehaviour
 
         // Enable/Disable buttons
         backButton.interactable = currentStep > 0;
-        nextButton.interactable = currentStep < instructionSteps.Count - 1;
+        //nextButton.interactable = currentStep < instructionSteps.Count - 1;
+        nextButton.interactable = true;
 
         // --- Step 3: Enable ring squeeze ---
         if (currentStep == 2)
@@ -85,6 +87,11 @@ public class VaginaRingInstructionScript : MonoBehaviour
             currentStep++;
             UpdateStepUI();
         }
+        else
+        {
+            Debug.Log("Instructions Complete! Returning to story...");
+            ReturnToStory();
+        }
     }
 
 
@@ -115,6 +122,11 @@ public class VaginaRingInstructionScript : MonoBehaviour
         {
             dragHint.SetActive(false);
         }
+    }
+
+    void ReturnToStory()
+    {
+        SceneManager.LoadScene("SafeSexScene"); 
     }
 }
 
