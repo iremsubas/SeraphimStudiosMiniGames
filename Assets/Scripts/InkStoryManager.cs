@@ -67,13 +67,20 @@ public class InkStoryManager : MonoBehaviour
                 });
             }
         }
-        else
-        {
-            Button restartButton = CreateChoiceView("End of story.\nRestart?");
-            restartButton.onClick.AddListener(delegate {
-                StartStory();
-            });
-        }
+        else 
+		{
+			// Restart option
+			Button restartButton = CreateChoiceView("Restart this topic");
+			restartButton.onClick.AddListener(delegate {
+				StartStory();
+			});
+
+			// Return to Main Menu option
+			Button returnButton = CreateChoiceView("Return to Main Menu");
+			returnButton.onClick.AddListener(delegate {
+				SceneManager.LoadScene("IntroScene"); 
+			});
+		}
     }
 
     void HandleTags()
@@ -83,7 +90,10 @@ public class InkStoryManager : MonoBehaviour
             StartCondomSizingMiniGame();
 			return;
         }
-
+		if (story.currentTags.Contains("SWITCH_BACKGROUND_BEDROOM"))
+        {
+            FindObjectOfType<BackgroundManagerScript>().SwitchToBedroom();
+        }
         if (story.currentTags.Contains("SWITCH_BACKGROUND_CLINIC"))
         {
             FindObjectOfType<BackgroundManagerScript>().SwitchToClinic();
@@ -149,5 +159,6 @@ public class InkStoryManager : MonoBehaviour
 		Debug.Log("Launching Vaginal Ring Mini-Game...");
 		SceneManager.LoadScene("VaginaRingScene");  
 	}
+	
 
 }

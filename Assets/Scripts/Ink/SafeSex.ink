@@ -2,6 +2,7 @@ VAR chose_protection = false
 
 ->intro
 === intro ===
+
 You're spending time with someone you trust. Things are getting intimate.
 
 They pause and ask, "Hey, before we go any further... are we using protection?"
@@ -265,8 +266,11 @@ You now know how to take action, protect yourself, and support others.
 -> end_scene
 
 === end_scene ===
+
 Thanks for playing.  
 No shame, just growth.  
 Safe sex is about respect — for your body and your choices.
 
 -> END
+
+
