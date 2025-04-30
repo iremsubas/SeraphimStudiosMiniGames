@@ -12,8 +12,14 @@ EditorBuildSettings:
     path: Assets/Scenes/IntroScene.unity
     guid: 5c91fc3abc0e74e93b1eae346e4e7e4c
   - enabled: 1
+    path: Assets/Scenes/ConsentActScene.unity
+    guid: 8af1c5cbac5094782904447c9410b35d
+  - enabled: 1
     path: Assets/Scenes/SafeSexScene.unity
     guid: 42d4b6c1c02314a048d3de196a797190
+  - enabled: 1
+    path: Assets/Scenes/HygieneActScene.unity
+    guid: 40fa68d8f11db463891b167f22f6f8ad
   - enabled: 1
     path: Assets/Scenes/IremsuScene.unity
     guid: 19c02ee65893e4d4e8e28007738eebe5
@@ -38,10 +44,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/VaginaRingScene.unity
     guid: 63c01eca15de84849b030669f80a121a
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/CervicalCapScene.unity
     guid: 2ad48c33374984aa28ee6f7935711e81
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/DiaphragmScene.unity
     guid: e1173be3fa5b34464b85b981a60d20d8
   - enabled: 1
@@ -50,9 +56,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/CongratulationsScene.unity
     guid: 8c1341531ca804b2ba306b5d32a914a8
-  - enabled: 1
-    path: Assets/Scenes/ConsentActScene.unity
-    guid: 8af1c5cbac5094782904447c9410b35d
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

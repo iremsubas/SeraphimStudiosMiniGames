@@ -18,13 +18,10 @@ What do you want to do?
     -> no_protection_consequence
 
 === external_condom_info ===
-Do you want to find the right size?
+Do you want to try putting one on correctly?
 
-+ Yes, let’s play the sizing game!
++ Yes, let’s play the condom mini-game!
     -> condom_game
-    
-+ Just use a standard one.
-    -> safe_outcome("external condom")
 
 === condom_game ===
 # MINIGAME_CONDOM_SIZING
@@ -57,76 +54,131 @@ At the clinic, a nurse welcomes you.
 Nurse: "Welcome! There are a few different types of birth control methods to consider.  
 Let me briefly explain the main categories."
 
-- "Hormonal Methods"
++ "Hormonal Methods"
     -> hormonal_methods_intro
-- "Barrier Methods"
++ "Barrier Methods"
     -> barrier_methods_intro
-- "Long-Acting Reversible Contraceptives (LARCs)"
++ "Long-Acting Reversible Contraceptives (LARCs)"
     -> larc_intro
-- "Emergency Contraceptives"
++ "Emergency Contraceptives"
     -> emergency_intro
 
 === hormonal_methods_intro ===
 Nurse: "Hormonal methods release hormones into your body to prevent pregnancy.  
-This includes options like the birth control pill, the patch, the shot, and the vaginal ring."
+This includes the pill, patch, shot, and vaginal ring."
 
--> clinic_interaction
+What would you like to do next?
+
++ "Learn about hormonal methods"
+    -> clinic_hormonal_methods
++ "Go back to method categories"
+    -> go_to_clinic
+
 
 === barrier_methods_intro ===
-Nurse: "Barrier methods physically block sperm from reaching the egg.  
-The most common method is the external condom, but there are also internal condoms, the diaphragm, and the cervical cap."
+Nurse: "Barrier methods block sperm from reaching the egg.  
+This includes external/internal condoms, diaphragm, and cervical cap."
 
--> clinic_interaction
+What would you like to do next?
+
++ "Learn about barrier methods"
+    -> clinic_barrier_methods
++ "Go back to method categories"
+    -> go_to_clinic
 
 === larc_intro ===
-Nurse: "LARCs (Long-Acting Reversible Contraceptives) are highly effective and last for years.  
-This includes the IUD (Intrauterine Device) and the implant, both of which require a visit to the doctor for insertion."
+Nurse: "LARCs are long-acting and don't require daily action.  
+They include IUDs and implants."
 
--> clinic_interaction
+What would you like to do next?
+
++ "Learn about LARC methods"
+    -> clinic_larc_methods
++ "Go back to method categories"
+    -> go_to_clinic
+
 
 === emergency_intro ===
-Nurse: "Emergency contraception is used after unprotected sex to prevent pregnancy.  
-There are pills you can take within 72 hours of unprotected sex, or a copper IUD can be used within 5 days."
+Nurse: "Emergency contraception is used after unprotected sex to reduce risk of pregnancy."
 
--> clinic_interaction
+What would you like to do next?
 
-=== clinic_interaction ===
-Nurse: "Now that you've learned about the different categories, let's take a closer look at the methods available."
++ "Learn about emergency methods"
+    -> clinic_emergency_methods
++ "Go back to method categories"
+    -> go_to_clinic
 
-What would you like to learn more about?
+=== clinic_hormonal_methods ===
+Which hormonal method would you like to learn about?
 
 + "The Pill"
     -> learn_pill
++ "Vaginal Ring"
+    -> learn_vaginal_ring
++ "Play the vaginal ring mini-game"
+    -> vaginal_ring_game
++ "Go back"
+    -> hormonal_methods_intro
+
+=== clinic_barrier_methods ===
+Which barrier method would you like to learn about?
+
 + "External condom"
     -> learn_external_condom
-+ "IUD"
-    -> learn_iud
-+ "Vaginal ring"
-    -> learn_vaginal_ring
++ "Play the condom mini-game"
+    -> condom_game
 + "Diaphragm"
     -> learn_diaphragm
-+ "Emergency contraception"
++ "Go back"
+    -> barrier_methods_intro
+
+=== clinic_larc_methods ===
+Which LARC method would you like to learn about?
+
++ "IUD"
+    -> learn_iud
++ "Go back"
+    -> larc_intro
+=== clinic_emergency_methods ===
+Which emergency method would you like to learn about?
+
++ "Emergency contraception (pill)"
     -> learn_emergency_contraception
-+ "I’m ready to decide."
++ "Go back"
+    -> emergency_intro
+
+
+=== RETURN_MENU ===
+What would you like to do next?
+
++ "Learn about another method"
+    -> go_to_clinic
++ "I'm ready to decide"
     -> ready_to_choose
+
 
 === learn_pill ===
 Nurse: "The pill is a small tablet you take daily. It releases hormones that prevent ovulation.  
 It’s one of the most common hormonal methods and is 99% effective when taken properly."
 
--> clinic_interaction
+-> RETURN_MENU
 
 === learn_external_condom ===
 Nurse: "External condoms are worn on the penis during sex to prevent sperm from entering the vagina.  
 They are widely available, affordable, and also provide protection against STIs."
 
--> clinic_interaction
+Would you like to try putting one on correctly?
+
++ "Yes, let’s play the condom mini-game!"
+    -> condom_game
++ "No thanks, just wanted to learn."
+    -> clinic_barrier_methods
 
 === learn_iud ===
 Nurse: "The IUD is a small T-shaped device that is inserted into the uterus.  
 It’s a long-acting method that can last between 3 and 10 years, depending on the type. It’s very effective and doesn’t require daily action."
 
--> clinic_interaction
+-> RETURN_MENU
 
 === learn_vaginal_ring ===
 Nurse: "The vaginal ring is a flexible, small ring that you place inside your vagina.  
@@ -137,7 +189,7 @@ Would you like to practice using the vaginal ring correctly?
 + "Yes, let’s try it out!"
     -> vaginal_ring_game
 + "No, I’ll just learn about it for now."
-    -> clinic_interaction
+-> RETURN_MENU
 
 === vaginal_ring_game ===
 # MINIGAME_VAGINAL_RING
@@ -147,19 +199,19 @@ Would you like to practice using the vaginal ring correctly?
 === waiting_after_ring_game ===
 [You return after completing the vaginal ring mini-game, feeling more confident!]
 
--> clinic_interaction
+-> RETURN_MENU
 
 === learn_diaphragm ===
 Nurse: "The diaphragm is a small, flexible cup that you insert into your vagina.  
 It covers the cervix and must be used with spermicide. It can be used on demand and is very effective when used correctly."
 
--> clinic_interaction
+-> RETURN_MENU
 
 === learn_emergency_contraception ===
 Nurse: "Emergency contraception (like the morning-after pill) can be used after unprotected sex.  
 It works by delaying or preventing ovulation. It’s not meant for regular use but can prevent pregnancy if used within 72 hours."
 
--> clinic_interaction
+-> RETURN_MENU
 
 === ready_to_choose ===
 You and your partner discuss your options based on what you've learned.
