@@ -63,6 +63,7 @@ Let me briefly explain the main categories."
 + "Emergency Contraceptives"
     -> emergency_intro
 
+
 === hormonal_methods_intro ===
 Nurse: "Hormonal methods release hormones into your body to prevent pregnancy.  
 This includes the pill, patch, shot, and vaginal ring."
@@ -71,8 +72,12 @@ What would you like to do next?
 
 + "Learn about hormonal methods"
     -> clinic_hormonal_methods
++ "Play the vaginal ring mini-game"
+    -> vaginal_ring_game
 + "Go back to method categories"
     -> go_to_clinic
++ "I'm ready to decide"
+    -> ready_to_choose
 
 
 === barrier_methods_intro ===
@@ -83,8 +88,12 @@ What would you like to do next?
 
 + "Learn about barrier methods"
     -> clinic_barrier_methods
++ "Play the condom mini-game!"
+    -> condom_game
 + "Go back to method categories"
     -> go_to_clinic
++ "I'm ready to decide"
+    -> ready_to_choose
 
 === larc_intro ===
 Nurse: "LARCs are long-acting and don't require daily action.  
@@ -96,6 +105,8 @@ What would you like to do next?
     -> clinic_larc_methods
 + "Go back to method categories"
     -> go_to_clinic
++ "I'm ready to decide"
+    -> ready_to_choose
 
 
 === emergency_intro ===
@@ -107,6 +118,8 @@ What would you like to do next?
     -> clinic_emergency_methods
 + "Go back to method categories"
     -> go_to_clinic
++ "I'm ready to decide"
+    -> ready_to_choose
 
 === clinic_hormonal_methods ===
 Which hormonal method would you like to learn about?
